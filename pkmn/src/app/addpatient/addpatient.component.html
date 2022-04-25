@@ -1,0 +1,38 @@
+<section>
+<form (ngSubmit)="savePatient()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="patient.nom" [ngModelOptions]="{standalone: true}">
+    <label for="exampleInputPassword1" class="form-label">Prenom</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.prenom" [ngModelOptions]="{standalone: true}">
+    <label class="form-label">Poids</label>
+    <input type="number" class="form-control" id="exampleInputPassword1"  [(ngModel)]="patient.poid" [ngModelOptions]="{standalone: true}">
+    <label for="exampleInputPassword1" class="form-label">Taille</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.taille"[ngModelOptions]="{standalone: true}">
+    <label for="exampleInputPassword1" class="form-label">Telephone</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.telephone" [ngModelOptions]="{standalone: true}">
+    <label for="exampleInputEmail1" class="form-label">sexe</label>
+    <p>
+      <input type="radio" [(ngModel)]="patient.sexe"  name="sex" value="m" > Male
+      <input type="radio" [(ngModel)]="patient.sexe"  name="sex" value="f" > Female
+   </p>
+
+
+
+   <label for="exampleInputPassword1" class="form-label">Date_naissance</label>
+    <input type="date" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.date_naissance" [ngModelOptions]="{standalone: true}">
+    <label for="exampleInputPassword1" class="form-label">Date_admission</label>
+    <input type="date" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.date_admission"  [ngModelOptions]="{standalone: true}">
+    <label for="exampleInputPassword1" class="form-label">Date_sortie</label>
+    <input type="date" class="form-control" id="exampleInputPassword1" [(ngModel)]="patient.date_sortie"  [ngModelOptions]="{standalone: true}">
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+  </div>.
+  
+</form>
+
+
+
+
+</section>

@@ -1,0 +1,24 @@
+
+<section>
+  <button type="button" class="btn btn-success"><a class="btn btn-primary text-light" routerLink="/addpatient">Add</a></button>
+      <table class="table table-dark">
+          <tbody>
+          <tr>
+            <th>@id  patient</th>
+            <td class="table-active">FisrtName</td>
+            <td  class="table-active">LastName</td>
+            <td  class="table-active">Date de  naissance</td>
+            <td  class="table-active">Action</td>
+          </tr>
+          <tr  *ngFor="let patient of patientList">
+            <th> {{patient.id_patient}}</th>
+            <td class="table-active">{{patient.prenom}}</td>
+            <td class="table-active">{{patient.nom}}</td>
+            <td class="table-active">{{patient.date_naissance| date:'medium' }}</td>
+            <td  class="table-active buttonflexe">
+              <button type="button" class="btn btn-danger" (click)="deletePatient(patient.id)">Delete</button>
+             <button type="button" class="btn btn-success"  routerLink="/updatepatient/{{patient.id_patient }}">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+</section>

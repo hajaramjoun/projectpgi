@@ -1,0 +1,24 @@
+<section>
+  <form (ngSubmit)="saveMedecin()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="medecin.nom" [ngModelOptions]="{standalone: true}">
+      <label for="exampleInputPassword1" class="form-label">Prenom</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="medecin.prenom" [ngModelOptions]="{standalone: true}">
+      <label for="exampleInputPassword1" class="form-label">Telephone</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" [(ngModel)]="medecin.telephone"[ngModelOptions]="{standalone: true}">
+      <label for="exampleInputEmail1" class="form-label">Specialité</label>
+      <p>
+        <input type="radio" [(ngModel)]="medecin.specialite" name="gériatrie" value="gériatrie" > gériatrie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="dermatologie" value="dermatologie" > dermatologie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="gastro-entérologie" value="gastro-entérologie" > gastro-entérologie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="anesthésiologie" value="anesthésiologie" > anesthésiologie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="endocrinologie" value="endocrinologie" > endocrinologie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="chirurgie" value="chirurgie" > chirurgie
+        <input type="radio" [(ngModel)]="medecin.specialite"  name="andrologie" value="andrologie" >andrologie
+     </p>
+     <button type="submit" class="btn btn-primary">Submit</button>
+    </div>.
+  </form>
+</section>
+
